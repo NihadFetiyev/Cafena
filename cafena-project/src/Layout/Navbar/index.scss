@@ -1,0 +1,316 @@
+#Navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background-color: #fff;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+
+    .NavbarContainer {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .navigations {
+            height: 100%;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .navList {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    font-size: 15px;
+                    font-weight: 700;
+
+                    a{
+                        height: 100%;
+                    }
+                }
+
+                .headNav {
+                    height: 100%;
+                    position: relative;
+                    
+                    .subNav {
+                        display: none;
+                        row-gap: 10px;
+                        width: max-content;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        z-index: 5;
+                        padding: 30px;
+                        background-color: white;
+                        border-radius: 3px;
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 15px;
+                    }
+
+                    &:hover .subNav{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+
+        .iconsDiv {
+            position: relative;
+            width: 7%;
+            display: flex;
+            justify-content: space-between;
+
+            i {
+                cursor: pointer;
+                font-size: 20px;
+                transition: 0.3s;
+            }
+
+            .searchForm {
+                margin-top: 20px;
+                position: absolute;
+                top: 100%;
+                right: 80%;
+                padding: 1em;
+                background-color: white;
+
+                .searchBox {
+                    width: 320px;
+                    height: 55px;
+                    padding: 20px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-color: #eee;
+
+                    #searchFromInput {
+                        width: 100%;
+                        font-size: 15px;
+                        padding: 0 10px;
+                        background-color: transparent;
+                        border: 0px;
+
+                        &:focus {
+                            outline: 0;
+                        }
+                    }
+
+                    .searchFromIcon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: black;
+                        width: 55px;
+                        height: 55px;
+                        color: white;
+
+                    }
+
+                }
+            }
+
+            .basket_icon {
+                position: relative;
+
+                .basketProductCount {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 15px;
+                    height: 15px;
+                    font-size: 11px;
+                    font-weight: 700;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    padding: 9px;
+                    border-radius: 10px;
+                    background-color: #cd8d16;
+                }
+            }
+        }
+
+        .sideInfo {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: -300px;
+            z-index: 5;
+            width: 300px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transition: 0.4s;
+
+            .sideInfoTitleBox {
+                width: 100%;
+
+                .sideInfoNav {
+                    display: none;
+                    align-items: center;
+
+                    .sideInfoBtns {
+                        font-weight: 700;
+                        cursor: pointer;
+                        padding: 20px 30px;
+                        color: white;
+                        background-color: black;
+                        font-size: 14px;
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.4s;
+                    }
+                }
+
+                .sideInfoHead {
+                    padding: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .sideInfoQuit {
+                        cursor: pointer;
+                        font-size: 17px;
+                        color: white;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: black;
+                        border-radius: 20px;
+                    }
+                }
+            }
+
+            .sideInfoTextBox{
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #Navbar {
+        height: 74px; // added
+        
+        // changed
+        .NavbarContainer {
+            width: 95%;
+
+            // Changed
+            .cafenaLogo{
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    #Navbar {
+        height: 74px; // added
+        width: 100%;
+
+        .NavbarContainer {
+            justify-content: space-between; // changed
+
+            .cafenaLogo{
+                display: flex; // changed
+            }
+    
+            .navigations {
+                display: none; // changed
+            }
+    
+            .iconsDiv {
+                width: 11%; // changed
+
+                .searchForm {
+                    margin-top: 20px;
+                    position: absolute;
+                    top: 100%;
+                    right: 80%;
+                    padding: 1em;
+                    background-color: white;
+                }
+            }
+    
+            .sideInfo {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                right: -300px;
+                z-index: 5;
+                width: 300px;
+                height: 100vh;
+                background-color: white;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                transition: 0.4s;
+    
+                .sideInfoTitleBox {
+                    width: 100%;
+    
+                    .sideInfoNav {
+                        display: flex;
+                        align-items: center;
+    
+                        .sideInfoBtns {
+                            font-weight: 700;
+                            cursor: pointer;
+                            padding: 20px 30px;
+                            color: white;
+                            background-color: black;
+                            font-size: 14px;
+                            width: 50%;
+                            display: flex; // added
+                            justify-content: center;
+                            align-items: center;
+                            transition: 0.4s;
+                        }
+                    }
+    
+                    .sideInfoHead {
+                        padding: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+    
+                        .sideInfoQuit {
+                            cursor: pointer;
+                            font-size: 17px;
+                            color: white;
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: black;
+                            border-radius: 20px;
+                        }
+                    }
+                }
+    
+                .sideInfoTextBox{
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+}

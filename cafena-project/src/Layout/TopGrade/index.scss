@@ -1,0 +1,251 @@
+.container_topGrade {
+    background-image: url(https://xpressrow.com/html/cafena/cafena/assets/images/shape/top-grade-shape-2-1.png);
+    background-position: fixed;
+    // display: flex;
+    justify-content: center;
+    // align-items: center;
+    width: 98%;
+
+    // up part
+
+    .worldTopTitle {
+        margin-top: 80px;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+        .text_topGrade {
+            .topgrade {
+                color: #ffffff;
+                background: #C7A17A;
+                font-family: "Jost", sans-serif;
+                display: inline-block;
+                font-size: 20px;
+                text-transform: uppercase;
+                padding: 1.5px 13px;
+                letter-spacing: 2px;
+                border-radius: 3px;
+                line-height: 22px;
+                margin-bottom: 23px;
+            }
+
+            h2 {
+                color: #000;
+                font-size: 55px;
+                line-height: 57px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    // down part
+    .downPartWorldTop {
+        margin-top: 85px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        // display: grid;
+        // grid-template-areas:"grid1 grid2 grid3 grid4";
+
+        // .coffe_brand1{ grid-area:"grid1";}
+        // .coffe_brand2{ grid-area:"grid2";}
+        // .coffe_brand3{ grid-area:"grid3";} 
+        // .coffe_brand4{ grid-area:"grid4";}
+
+
+
+        .coffe_brand {
+            margin-top: 0px;
+            // background-color: red;
+            width: 100%;
+        }
+
+        // gap: 100px;
+        // flex-wrap: wrap;
+
+        .TwoBrands {
+            display: flex;
+            column-gap: 100px;
+        }
+
+        // .firstTwoBrands{
+
+        // }
+
+        // .secondTwoBrands{
+        // }
+
+        .arebica {
+            position: relative;
+            z-index: 2;
+            margin-top: 55px;
+            max-width: fit-content;
+
+
+            .americano_grade {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    border-radius: 50%;
+                    max-width: 100%;
+                    height: 160px;
+                    width: 166px;
+                    object-fit: cover;
+                }
+
+                .count {
+                    position: absolute;
+                    top: 0;
+                    left: 40px;
+                    background: #ffffff;
+                    color: #000;
+                    border: 1px solid #E2DFDD;
+                    font-weight: 500;
+                    margin-top: 0;
+                    font-size: 30px;
+                    border-radius: 50px;
+                    padding: 10px;
+                }
+
+                .text_americano {
+                    p {
+                        color: #6C6C6C;
+                    }
+                }
+            }
+        }
+
+        .americano {
+            position: relative;
+            z-index: 2;
+            max-width: fit-content;
+
+            .americano_grade {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    border-radius: 50%;
+                    max-width: 100%;
+                    height: 160px;
+                    width: 166px;
+                }
+
+                .count {
+                    position: absolute;
+                    top: 0;
+                    left: 40px;
+                    background: #ffffff;
+                    color: #000;
+                    border: 1px solid #E2DFDD;
+                    font-weight: 500;
+                    margin-top: 0;
+                    font-size: 30px;
+                    border-radius: 50px;
+                    padding: 10px;
+                }
+
+                .text_americano {
+                    p {
+                        color: #6C6C6C;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+
+
+    .container_topGrade {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .downPartWorldTop {
+        margin-top: 0px;
+
+        // display: grid;
+        // grid-template-areas:"grid1 grid2"
+        //                     "grid3 grid4";
+
+        // .coffe_brand1{ grid-area:"grid1";}
+        // .coffe_brand2{ grid-area:"grid2";}
+        // .coffe_brand3{ grid-area:"grid3";} 
+        // .coffe_brand4{ grid-area:"grid4";}
+
+
+
+        // .coffe_brand{
+        //     margin-top: 0px;
+        // }
+        display: flex;
+        flex-wrap: wrap;
+
+        .arabica{
+            margin-top: 0px;
+        }
+
+        .coffe_brand {
+            width: 100%;
+        }
+
+        .TwoBrands {
+            width: 50%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+
+
+    .container_topGrade {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .downPartWorldTop {
+        row-gap: 100px;
+        margin-top: 0px;
+
+        // display: grid;
+        // grid-template-areas:"grid1 grid2"
+        //                     "grid3 grid4";
+
+        // .coffe_brand1{ grid-area:"grid1";}
+        // .coffe_brand2{ grid-area:"grid2";}
+        // .coffe_brand3{ grid-area:"grid3";} 
+        // .coffe_brand4{ grid-area:"grid4";}
+
+
+
+        // .coffe_brand{
+        //     margin-top: 0px;
+        // }
+        display: flex;
+        flex-wrap: wrap;
+
+        .arabica{
+            margin-top: 0px;
+        }
+
+        .coffe_brand {
+            width: 50%;
+        }
+
+        .TwoBrands {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 60px;
+        }
+    }
+}
